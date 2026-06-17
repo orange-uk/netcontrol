@@ -1,0 +1,9 @@
+node_modules/
+logs/
+*.log
+.DS_Store
+
+# Local config + runtime state hold the PIN and device MACs/IPs — never commit.
+src/config.js
+data/*
+!data/state.example.json

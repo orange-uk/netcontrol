@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>uk.co.netcontrol.server</string>
+
+  <!-- Must run as a LaunchDaemon (root) so the built-in DNS resolver can bind
+       the privileged port 53. Install to /Library/LaunchDaemons (root:wheel). -->
+  <key>UserName</key>
+  <string>root</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/bin/node</string>
+    <string>/Users/niekmeijer/netcontrol/src/server.js</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/niekmeijer/netcontrol</string>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/niekmeijer/netcontrol/logs/server.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/niekmeijer/netcontrol/logs/server-error.log</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>NODE_ENV</key>
+    <string>production</string>
+  </dict>
+</dict>
+</plist>

@@ -1,0 +1,14 @@
+{
+  "groups": [
+    {
+      "id": "1700000000000",
+      "name": "Example group",
+      "devices": [
+        { "id": "1700000000001", "name": "Example device", "mac": "AA:BB:CC:DD:EE:FF", "ip": "192.168.1.50" }
+      ],
+      "schedules": [],
+      "blocked": false,
+      "manualOverride": false
+    }
+  ]
+}
